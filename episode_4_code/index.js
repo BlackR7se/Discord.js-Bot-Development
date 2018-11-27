@@ -66,7 +66,7 @@ bot.on("message", async message => {
     .addField("Time", message.createdAt)
     .addField("Reason", bReason);
 
-    let incidentchannel = message.guild.channels.find(`name`, "incidents");
+    let incidentchannel = message.guild.channels.find(`name`, "bans");
     if(!incidentchannel) return message.channel.send("Can't find incidents channel.");
 
     message.guild.member(bUser).ban(bReason);
